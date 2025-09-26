@@ -1,0 +1,17 @@
+body{
+    background-color: #FCF0FE;
+}
+
+nav {
+    background-color: #FCF0FE;
+    padding: 10px;
+}
+
+.dark-purple{
+    color: #9C7EDE;
+}
+
+.navbar .nav-link{
+    color: #9C7EDE;
+    font-weight: bold;
+}
