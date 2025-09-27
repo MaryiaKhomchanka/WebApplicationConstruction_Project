@@ -1,17 +1,11 @@
-body{
-    background-color: #FCF0FE;
+:root{
+    --background-light: #FCF0FE;
+    --custom-text-purple: #9C80D4;
+
 }
 
-nav {
-    background-color: #FCF0FE;
-    padding: 10px;
-}
 
-.dark-purple{
-    color: #9C7EDE;
-}
-
-.navbar .nav-link{
-    color: #9C7EDE;
-    font-weight: bold;
+[data-bs-theme = "light"]{
+    --bs-body-color: var(--custom-text-purple);
+    --bs-body-bg: var(--background-light);
 }
