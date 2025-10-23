@@ -11,7 +11,13 @@
     font-style: normal;
   }
 
-
+.circle-image {
+    width: 100%;
+    border-radius: 50%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+  }
 
 
 /*------------------------*/ 
@@ -40,5 +46,26 @@
   [data-bs-theme="light"] .homeBanner * {
     background-color:#B8B8EA;
   }
+
+
+  [data-bs-theme="light"] .btn-primary {
+    
+    --bs-btn-bg: var(--custom-text-purple);
+    --bs-btn-border-color: var(--custom-text-purple);
+    --bs-btn-hover-bg: #7E5FC8;
+    --bs-btn-hover-border-color: #7E5FC8;
+    --bs-btn-padding-x: 2rem;
+    
+    }
+
+    /*
+    [data-bs-theme="light"] .navbar-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 30rem;
+        padding: 1rem;
+    
+    }
+
 
   /*------------------------*/
