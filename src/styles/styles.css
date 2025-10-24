@@ -58,6 +58,11 @@
     
     }
 
+    [data-bs-theme="light"] .circle-image {
+        border: 5px solid var(--custom-text-purple);
+
+    }
+
     /*
     [data-bs-theme="light"] .navbar-buttons {
         display: flex;

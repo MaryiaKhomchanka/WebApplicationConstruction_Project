@@ -1,5 +1,5 @@
 import banner from '../assets/banner.png'
-import aboutMe from '../assets/AboutMe.jpg'
+import aboutMe from '../assets/AboutMe.jpeg'
 
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
          <div className = "card m-5 p-4"> 
             <div className = "row g-0">
             <div className = "col-md-4">
-                <img src = {aboutMe} alt = "About Me" className = "circle-image img-fluid rounded-circle border border-3 border-primary"/> 
+                <img src = {aboutMe} alt = "About Me" className = "circle-image img-fluid rounded-circle"/> 
             </div>
             <div className = "col-md-8">
                 <div className = "card-body text-center">
