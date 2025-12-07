@@ -1,0 +1,145 @@
+:root{
+    --background-light: #FCF0FE;
+    --custom-text-purple: #9C80D4;
+    --card-bg-light: #ffffff;
+
+}
+
+.short-stack-regular {
+    font-family: "Short Stack", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.circle-image {
+    width: 100%;
+    border-radius: 50%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+  }
+
+
+:root{
+    --bs-body-bg: var(--background-light);
+    --bs-body-color: var(--custom-text-purple);
+    --bs-card-bg: var(--card-bg-light);
+}
+
+  .card{
+    --bs-card-bg: var(--card-bg-light);
+}
+
+  .card .table * {
+    background-color: var(--bs-card-bg);
+  }
+
+  .navbar {
+    --bs-navbar-color: var(--custom-text-purple);
+    --bs-navbar-hover-color: var(--custom-text-purple);
+    --bs-navbar-brand-color: var(--custom-text-purple);
+    --bs-navbar-brand-hover-color: var(--custom-text-purple);
+  }
+
+  [data-bs-theme="light"] .homeBanner * {
+    background-color:#B8B8EA;
+  }
+
+
+  .btn-primary {
+    
+    --bs-btn-bg: var(--custom-text-purple);
+    --bs-btn-border-color: var(--custom-text-purple);
+    --bs-btn-hover-bg: #7E5FC8;
+    --bs-btn-hover-border-color: #7E5FC8;
+    --bs-btn-padding-x: 2rem;
+    
+    }
+
+/*------------------------*/
+/*Login/Register Page*/
+
+    .LoginPage{
+      min-height: calc(100vh - 80px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
+      background-color: var(--background-light);
+    }
+
+    .LoginCard{
+      width: 100%;
+      max-width: 520px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 2.5rem 3rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .LoginTitle{
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+      color: var(--custom-text-purple);
+    }
+
+    .LoginSubtitle{
+      margin-bottom: 2rem;
+      color: var(--custom-text-purple);
+    }
+
+    .LoginLink{
+      color: var(--custom-text-purple);
+      text-decoration: underline;
+    }
+
+    .LoginLink:hover{
+      color: #7E5FC8;
+    }
+
+
+    .LoginField{
+      display:flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+
+    .LoginLabel{
+      font-weight:600;
+      color: var(--custom-text-purple);
+    }
+
+    .LoginInput{
+      width: 100%;
+      padding: 0.6rem 0.8rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      outline: none;
+      background-color: #ffffff
+    }
+
+    .LoginInput:focus{
+      border-color: var(--custom-text-purple);
+      box-shadow: 0 0 2px var(--custom-text-purple);
+    }
+
+
+    .LoginButton{
+      margin: 1.5rem 0 0 0;
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 999px;
+      border: none;
+      font-weight:600;
+      font-size:1rem;
+      background-color: var(--custom-text-purple);
+      color: #ffffff;
+      cursor: pointer;
+      transition: background-color 0.15s ease, transform 0.05s ease;
+    }
+
+    
+
+  /*------------------------*/
