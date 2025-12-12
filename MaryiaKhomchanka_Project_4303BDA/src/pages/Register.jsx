@@ -28,12 +28,12 @@ export default function Register() {
             const data = await response.json();
 
             if (!response.ok) {
-                throw new Error(data.message || 'Registration failed');
+                throw new Error(data.error || 'Registration failed');
             }
 
             navigate('/login');
-        } catch (err) {
-            setError(err.message);
+        } catch (error) {
+            setError(error.message);
         } finally {
             setLoading(false);
         }

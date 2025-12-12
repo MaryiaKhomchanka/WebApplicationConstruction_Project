@@ -1,17 +1,17 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import {useState} from 'react';
+import {useNavigate, Link} from 'react-router-dom'; //Changing pages and linking to other pages
+
 
 export default function Login() {
     const[emailOrUsername, setEmailOrUsername] = useState('');
     const[password, setPassword] = useState('');
-    const[error, setError] = useState('');
-    const[loading, setLoading] = useState(false);
+    const[error, setError] = useState(''); //Text to show error messages
+    const[loading, setLoading] = useState(false); //Loading = true when the request is being processed
 
-    const navigate = useNavigate();
+    const navigate = useNavigate(); //Used to change pages
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault(); //Preventing the page from reloading after form submission
         setLoading(true);
         setError('');
 
@@ -22,25 +22,27 @@ export default function Login() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ emailOrUsername, password }),
-            });
+                body: JSON.stringify({emailOrUsername, password}),
+            }); //Calling the backend API
 
-            const data = await response.json();
+            const data = await response.json(); //Converting the response to JSON
 
             if(!response.ok){
                 throw new Error(data.error || 'Login failed');
             }
 
-            localStorage.setItem('token', data.token);
-            localStorage.setItem('username', data.user.username);
+            localStorage.setItem('token', data.token); //Storing the token in localStorage
+            localStorage.setItem('username', data.user.username); //Storing the username in localStorage
+
+            window.dispatchEvent(new Event("loginChange"));
 
             navigate('/profile');
-            window.location.reload();
+           
 
         } catch (err) {
             setError(err.message);
         } finally {
-            setLoading(false);
+            setLoading(false); //No matter what happens, stop the loading state, so the button is clickable again
         }
     };
 
